@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Prata&display=swap&subset=cyrillic');
+
+
+// 12 column grid
+@import 'partials/smart-grid';
+// Normalize
+@include reset();
+
+
+//Vars
+$primary: #0DDEFF;
+$secondary: #7B7B7B;
+
+$font-color: #615a4d;
+$font-color-dark: #9D98A1;
+
+$btn-color: linear-gradient(180deg, #F2A506 0%, #B6985A 100%), #B6985A;
+
+$white: #fff;
+$black: #000;
+$gray: #3a383c;
+
+$burger-point: 870px;
+
+$md: 780px;
+
+
+// Mixin
+@mixin prata {
+    font-family: 'Prata', serif;
+}
+@mixin open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+// Base
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: none;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    //font-family: 'Prata', serif;
+    @include open-sans();
+    font-size: 1.4rem;
+    margin: 0;
+    //overflow: hidden!important;
+    overflow-y: scroll!important; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+// img {
+//     object-fit: cover;
+// }
+
+.container {
+    @include wrapper();
+}
+
+.container-full {
+    @include wrapper-full();
+}
+.section {
+    padding: 7.5rem 0;
+}
+.block {
+    display: block;
+}
+.text-center {
+    text-align: center;
+}

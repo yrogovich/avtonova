@@ -123,7 +123,7 @@ function electromobiles_scripts() {
 	wp_enqueue_style( 'electromobiles-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'electromobiles-main-style', get_template_directory_uri() . '/src/css/style.css' );
 
-	wp_enqueue_script( 'jQuery');
+	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'electromobiles-main-script', get_template_directory_uri() . '/src/js/main.js', 'jQuery', true );
 	// wp_enqueue_script( 'electromobiles-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	// wp_enqueue_script( 'electromobiles-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

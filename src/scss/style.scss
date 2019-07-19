@@ -79,6 +79,9 @@ p {
 .text-center {
     text-align: center;
 }
+.primary {
+    color: $primary!important;
+}
 
 ////Btn
 .btn {
@@ -199,9 +202,6 @@ p {
         .container {
             justify-content: space-between;
         }
-        .logo {
-
-        }
         .right-side {
             @include md(display, none);
             display: flex;
@@ -309,7 +309,6 @@ p {
     display: none;
     z-index: 50;
     @include md(display, block);
-
     .line {
         fill:none;
         transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
@@ -422,7 +421,7 @@ header {
     border-bottom: .4rem solid rgba(255, 255, 255, 0.5);
 
     margin-right: 3rem;
-    &:before {
+    &:after {
         content: '';
         height: .4rem;
         width: 0;
@@ -436,7 +435,7 @@ header {
 
         transition: all .5s cubic-bezier(0.21, 0.15, 0, 1);
     }
-    &:hover:before {
+    &:hover:after {
         width: 100%;
     }
 }
@@ -458,7 +457,7 @@ header {
     color: $primary;
     letter-spacing: 0.12rem;    
     border-bottom: .4rem solid rgba(13, 222, 255, 0.3);
-    &:before {
+    &:after {
         background-color: $primary;
         transition: all .5s cubic-bezier(0.21, 0.15, 0, 1);
     }
@@ -478,17 +477,7 @@ header {
     position: relative;
     padding: 24rem 0 18rem;
     &::before {
-        content: url('data:image/svg+xml; utf8,<svg viewBox="0 0 1849 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g opacity="0.03">
-        <path d="M221.468 205.36V273H0.30835V6.99998H216.528V74.64H88.4684V105.8H200.948V170.4H88.4684V205.36H221.468Z" fill="black"/>
-        <path d="M255.992 6.99998H345.672V203.46H465.752V273H255.992V6.99998Z" fill="black"/>
-        <path d="M711.683 205.36V273H490.523V6.99998H706.743V74.64H578.683V105.8H691.163V170.4H578.683V205.36H711.683Z" fill="black"/>
-        <path d="M883.767 279.08C855.647 279.08 830.314 273.253 807.767 261.6C785.22 249.693 767.487 233.227 754.567 212.2C741.9 190.92 735.567 166.853 735.567 140C735.567 113.147 741.9 89.2067 754.567 68.18C767.487 46.9 785.22 30.4333 807.767 18.78C830.314 6.87332 855.647 0.919983 883.767 0.919983C909.607 0.919983 932.66 5.47999 952.927 14.6C973.193 23.72 989.914 36.8933 1003.09 54.12L946.467 104.66C930 83.8866 910.62 73.5 888.327 73.5C869.58 73.5 854.507 79.58 843.107 91.74C831.707 103.647 826.007 119.733 826.007 140C826.007 160.267 831.707 176.48 843.107 188.64C854.507 200.547 869.58 206.5 888.327 206.5C910.62 206.5 930 196.113 946.467 175.34L1003.09 225.88C989.914 243.107 973.193 256.28 952.927 265.4C932.66 274.52 909.607 279.08 883.767 279.08Z" fill="black"/>
-        <path d="M1084.88 76.54H1006.98V6.99998H1252.46V76.54H1174.56V273H1084.88V76.54Z" fill="black"/>
-        <path d="M1389.76 206.12H1365.44V273H1275.76V6.99998H1403.82C1428.39 6.99998 1449.8 11.0533 1468.04 19.16C1486.28 27.2666 1500.34 38.92 1510.22 54.12C1520.1 69.32 1525.04 87.0533 1525.04 107.32C1525.04 126.32 1520.73 142.913 1512.12 157.1C1503.5 171.287 1491.09 182.56 1474.88 190.92L1530.74 273H1434.98L1389.76 206.12ZM1434.6 107.32C1434.6 97.44 1431.56 89.84 1425.48 84.52C1419.4 78.9467 1410.28 76.16 1398.12 76.16H1365.44V138.48H1398.12C1410.28 138.48 1419.4 135.82 1425.48 130.5C1431.56 124.927 1434.6 117.2 1434.6 107.32Z" fill="black"/>
-        <path d="M1698.36 279.08C1669.74 279.08 1644.02 273.127 1621.22 261.22C1598.42 249.313 1580.56 232.847 1567.64 211.82C1554.72 190.54 1548.26 166.6 1548.26 140C1548.26 113.4 1554.72 89.5867 1567.64 68.56C1580.56 47.28 1598.42 30.6866 1621.22 18.78C1644.02 6.87332 1669.74 0.919983 1698.36 0.919983C1726.99 0.919983 1752.7 6.87332 1775.5 18.78C1798.3 30.6866 1816.16 47.28 1829.08 68.56C1842 89.5867 1848.46 113.4 1848.46 140C1848.46 166.6 1842 190.54 1829.08 211.82C1816.16 232.847 1798.3 249.313 1775.5 261.22C1752.7 273.127 1726.99 279.08 1698.36 279.08ZM1698.36 206.5C1709.51 206.5 1719.52 203.84 1728.38 198.52C1737.5 192.947 1744.72 185.22 1750.04 175.34C1755.36 165.207 1758.02 153.427 1758.02 140C1758.02 126.573 1755.36 114.92 1750.04 105.04C1744.72 94.9067 1737.5 87.18 1728.38 81.86C1719.52 76.2866 1709.51 73.5 1698.36 73.5C1687.22 73.5 1677.08 76.2866 1667.96 81.86C1659.1 87.18 1652 94.9067 1646.68 105.04C1641.36 114.92 1638.7 126.573 1638.7 140C1638.7 153.427 1641.36 165.207 1646.68 175.34C1652 185.22 1659.1 192.947 1667.96 198.52C1677.08 203.84 1687.22 206.5 1698.36 206.5Z" fill="black"/>
-        </g>
-        </svg>');
+        content: url('data:image/svg+xml; utf8,<svg viewBox="0 0 1849 280" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.03"><path d="M221.468 205.36V273H0.30835V6.99998H216.528V74.64H88.4684V105.8H200.948V170.4H88.4684V205.36H221.468Z" fill="black"/><path d="M255.992 6.99998H345.672V203.46H465.752V273H255.992V6.99998Z" fill="black"/><path d="M711.683 205.36V273H490.523V6.99998H706.743V74.64H578.683V105.8H691.163V170.4H578.683V205.36H711.683Z" fill="black"/><path d="M883.767 279.08C855.647 279.08 830.314 273.253 807.767 261.6C785.22 249.693 767.487 233.227 754.567 212.2C741.9 190.92 735.567 166.853 735.567 140C735.567 113.147 741.9 89.2067 754.567 68.18C767.487 46.9 785.22 30.4333 807.767 18.78C830.314 6.87332 855.647 0.919983 883.767 0.919983C909.607 0.919983 932.66 5.47999 952.927 14.6C973.193 23.72 989.914 36.8933 1003.09 54.12L946.467 104.66C930 83.8866 910.62 73.5 888.327 73.5C869.58 73.5 854.507 79.58 843.107 91.74C831.707 103.647 826.007 119.733 826.007 140C826.007 160.267 831.707 176.48 843.107 188.64C854.507 200.547 869.58 206.5 888.327 206.5C910.62 206.5 930 196.113 946.467 175.34L1003.09 225.88C989.914 243.107 973.193 256.28 952.927 265.4C932.66 274.52 909.607 279.08 883.767 279.08Z" fill="black"/><path d="M1084.88 76.54H1006.98V6.99998H1252.46V76.54H1174.56V273H1084.88V76.54Z" fill="black"/><path d="M1389.76 206.12H1365.44V273H1275.76V6.99998H1403.82C1428.39 6.99998 1449.8 11.0533 1468.04 19.16C1486.28 27.2666 1500.34 38.92 1510.22 54.12C1520.1 69.32 1525.04 87.0533 1525.04 107.32C1525.04 126.32 1520.73 142.913 1512.12 157.1C1503.5 171.287 1491.09 182.56 1474.88 190.92L1530.74 273H1434.98L1389.76 206.12ZM1434.6 107.32C1434.6 97.44 1431.56 89.84 1425.48 84.52C1419.4 78.9467 1410.28 76.16 1398.12 76.16H1365.44V138.48H1398.12C1410.28 138.48 1419.4 135.82 1425.48 130.5C1431.56 124.927 1434.6 117.2 1434.6 107.32Z" fill="black"/><path d="M1698.36 279.08C1669.74 279.08 1644.02 273.127 1621.22 261.22C1598.42 249.313 1580.56 232.847 1567.64 211.82C1554.72 190.54 1548.26 166.6 1548.26 140C1548.26 113.4 1554.72 89.5867 1567.64 68.56C1580.56 47.28 1598.42 30.6866 1621.22 18.78C1644.02 6.87332 1669.74 0.919983 1698.36 0.919983C1726.99 0.919983 1752.7 6.87332 1775.5 18.78C1798.3 30.6866 1816.16 47.28 1829.08 68.56C1842 89.5867 1848.46 113.4 1848.46 140C1848.46 166.6 1842 190.54 1829.08 211.82C1816.16 232.847 1798.3 249.313 1775.5 261.22C1752.7 273.127 1726.99 279.08 1698.36 279.08ZM1698.36 206.5C1709.51 206.5 1719.52 203.84 1728.38 198.52C1737.5 192.947 1744.72 185.22 1750.04 175.34C1755.36 165.207 1758.02 153.427 1758.02 140C1758.02 126.573 1755.36 114.92 1750.04 105.04C1744.72 94.9067 1737.5 87.18 1728.38 81.86C1719.52 76.2866 1709.51 73.5 1698.36 73.5C1687.22 73.5 1677.08 76.2866 1667.96 81.86C1659.1 87.18 1652 94.9067 1646.68 105.04C1641.36 114.92 1638.7 126.573 1638.7 140C1638.7 153.427 1641.36 165.207 1646.68 175.34C1652 185.22 1659.1 192.947 1667.96 198.52C1677.08 203.84 1687.22 206.5 1698.36 206.5Z" fill="black"/></g></svg>');
         display: block;
         position: absolute;
         top: 11rem;
@@ -527,5 +516,168 @@ header {
                 margin-bottom: 1.5rem;
             }
         }
+    }
+}
+
+// Calculator
+.leaders {
+    list-style: none;
+    width: 100%;
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin: 36px 0;
+      position: relative;
+      span {
+        background-color: #fff;
+        color: $black;
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 0 4px;
+        z-index: 1;
+      }
+      .value {
+        color: $primary;
+        text-transform: uppercase;
+        text-align: right;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: 4px;
+        border-bottom: 2px dotted #dedede;
+        z-index: 0;
+      }
+    }
+}
+.section-calculator {
+    position: relative;
+    background-color: $primary;
+    padding: 15rem 0;
+    overflow: hidden;
+    z-index: 1;
+
+    .circles {
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            height: auto;
+            z-index: -1;
+        }
+        .circle-1 {
+            width: 110.6rem;
+            height: 110.6rem;
+            background-color: #12ceec;
+        }
+        .circle-2 {
+            width: 96.6rem;
+            height: 96.6rem;
+            background-color: #29c4dc;
+        }
+        .circle-3 {
+            width: 82.8rem;
+            height: 82.8rem;
+            background-color: #2db6cc;
+        }
+    }
+
+    #calculator {
+        max-width: 92rem;
+        margin: auto;
+        background-color: $white;
+        border-radius: 2rem;
+        box-shadow: 0 2rem 3.5rem rgba(0, 0, 0, 0.1);
+        //padding: 5rem 10rem;
+
+        $padding-top: 5rem;
+        $padding-left-right: 9.3rem;
+        $border-color: #e5e5e5;
+
+        .head {
+            padding: $padding-top $padding-left-right 2rem $padding-left-right;
+            @include sm(padding, 4rem 3rem 2rem 3rem);
+
+            border-bottom: 1px solid $border-color;
+        }
+        .body {
+            padding: $padding-top $padding-left-right 2rem $padding-left-right;
+            @include sm(padding, 2rem 3rem 2rem 3rem);
+
+            @include row-flex();
+
+            .h3 {
+                margin-bottom: 2.5rem;
+            }
+
+            .left-column,
+            .right-column {
+                @include col();
+                @include size(6);
+                @include size-md(12);
+            }
+
+            .pair {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.2rem;
+
+                label {
+                    color: $black;
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    margin-bottom: 1rem;
+                    min-width: 110px;
+                }
+                .input-wrapper {   
+                    width: 200px;
+                    max-width: 100%;
+                    input {
+                        font-size: 1.3rem;
+                        width: 100%;
+                        border: 0.1rem solid #c4c4c4;
+                        background-color: #f8f8f8;
+                        border-radius: 10rem;
+                        padding: 1.2rem 2rem;
+                    }
+                }
+            }
+
+            .right-column {
+                padding-left: 4rem;
+                @include md(padding, 0);
+            }
+        }
+        .foot {
+            border-top: 1px solid $border-color;
+            padding: 3rem $padding-left-right;
+            @include sm(padding, 2rem 3rem 2rem 3rem);
+            @include sm(font-size, 2.2rem);
+        }
+
+        
+    }
+} 
+.h2 {
+    font-size: 3.2rem;
+    @include sm(font-size, 2.2rem);
+    font-weight: 900;
+    text-transform: uppercase;
+}  
+.icon-gas-station {
+    position: relative;
+    margin-left: 4.5rem;
+    &:before {
+        content: url('../img/icons/charge-station.svg');
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        transform: translate(-100%, -40%);
     }
 }

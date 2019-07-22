@@ -177,6 +177,25 @@ get_header();
     </div>
 </div>
 
+<div id="myths">
+    <div class="container">
+        <div class="row">
+            <div class="left-column">
+                <div class="h2">
+                    <span class="big">МИФЫ</span>
+                    об электромобилях
+                </div>
+                <div class="btn btn-primary">Узнать все мифы</div>
+            </div>
+            <!-- /.left-column -->
+            <div class="right-column">
+                <img src="<?php bloginfo('template_url') ?>/src/img/home/charging-plug-compressed.jpg" alt="charging-plug">
+            </div>
+            <!-- /.right-column -->
+        </div>
+    </div>
+</div>
+
 
 
 

@@ -32,6 +32,7 @@ get_header();
         </ul>
     </div>
 </header>
+<!-- /header -->
 
 <div class="section-features" id="features">
     <div class="container">
@@ -96,6 +97,7 @@ get_header();
     </div>
     <img class="car" src="<?php bloginfo('template_url') ?>/src/img/home/car-on-charging-compressed.jpg" alt="">
 </div>
+<!-- /#features -->
 
 <div class="section-calculator">
     <div class="circles">
@@ -176,6 +178,7 @@ get_header();
         <!-- /#calculator -->
     </div>
 </div>
+<!-- /.section-calculator -->
 
 <div id="myths">
     <div class="container">
@@ -195,9 +198,38 @@ get_header();
         </div>
     </div>
 </div>
+<!-- /#myths -->
 
+<div class="section gray" id="catalog">
+    <div class="container">
+        <div class="h2 center">Каталог электромобилей</div>
 
-
+        <div id="tabs">
+            <ul class="tabs-nav">
+                <li><a href="#tabs-1">Электромобили в наличии</a></li>
+                <li><a href="#tabs-2">Новые поступления</a></li>
+                <li><a href="#tabs-3">Акционные предложения</a></li>
+            </ul>
+            <div class="tab" id="tabs-1">
+               <div class="catalog-row">
+                    <?php echo get_template_part('templates/parts/automobile-card') ?>
+               </div>
+            </div>
+            <div class="tab" id="tabs-2">
+            <div class="catalog-row">
+                    <?php echo get_template_part('templates/parts/automobile-card') ?>
+               </div>
+            </div>
+            <div class="tab" id="tabs-3">
+                <div class="catalog-row">
+                    <?php echo get_template_part('templates/parts/automobile-card') ?>
+               </div>
+            </div>
+        </div>
+        <!-- /#tabs -->
+    </div>
+</div>
+<!-- /#catalog -->
 
 <?php
 get_footer();

@@ -177,6 +177,8 @@ input:focus {
   position: relative;
   display: inline-block;
   text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
@@ -199,17 +201,19 @@ input:focus {
 }
 
 .btn-flat {
-  background-color: #0ddeff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0DDEFF), to(#0090A7));
+  background: linear-gradient(180deg, #0DDEFF 0%, #0090A7 100%);
   color: #ffffff;
 }
 
 .btn-flat:hover {
-  -webkit-filter: saturate(140%);
-          filter: saturate(140%);
+  -webkit-filter: saturate(160%);
+          filter: saturate(160%);
 }
 
 .btn-flat:active {
-  background-color: #0fb9d3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0DDEFF), to(#0fb9d3));
+  background: linear-gradient(180deg, #0DDEFF 0%, #0fb9d3 100%);
 }
 
 .btn-inverse {
@@ -309,6 +313,10 @@ input:focus {
   transition: all 0.5s cubic-bezier(0.21, 0.15, 0, 1);
 }
 
+.logo img {
+  vertical-align: middle;
+}
+
 .logo:hover {
   -webkit-filter: saturate(150%);
           filter: saturate(150%);
@@ -380,12 +388,11 @@ input:focus {
 .navbar-top .right-side .btn {
   padding: 1.2rem 1.5rem;
   font-size: 1rem;
-  border: 1px solid #0ddeff;
   vertical-align: middle;
 }
 
 .navbar-bottom {
-  background-color: #0ddeff;
+  background-color: #0090A7;
   color: #ffffff;
   z-index: 20;
 }
@@ -539,7 +546,7 @@ input:focus {
 
 header {
   padding-top: 7rem;
-  background: #5555 url("../img/home/main-bg-compressed.jpg") bottom right/cover no-repeat;
+  background: #5555 url("../img/home/main-bg-v2-compressed.jpg") bottom center/cover no-repeat;
   min-height: 86.7vh;
   color: #ffffff;
 }
@@ -552,8 +559,6 @@ header {
 
 @media screen and (max-width: 960px) {
   header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#192833)), url("../img/home/main-bg-compressed.jpg");
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #192833 100%), url("../img/home/main-bg-compressed.jpg");
     min-height: 90vh;
   }
 }

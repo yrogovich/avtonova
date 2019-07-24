@@ -63,7 +63,7 @@
 
 				<div class="column-4">
 					<a href="<?php echo get_home_url(); ?>" class="logo">
-						<img src="<?php bloginfo('template_url') ?>/src/img/logo.png" alt="автонова">
+						<img src="<?php bloginfo('template_url') ?>/src/img/logo-v2.png" alt="автонова">
 					</a>
 
 					<p class="bold">ООО "Автонова"</p>

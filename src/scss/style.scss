@@ -110,6 +110,7 @@ input {
     position: relative;
     display: inline-block;
     text-align: center;
+    box-sizing: border-box;
 
     cursor: pointer;
     touch-action: manipulation;
@@ -123,13 +124,13 @@ input {
     }
                 
     &-flat {
-        background-color: $primary;
+        background: linear-gradient(180deg, #0DDEFF 0%, #0090A7 100%);
         color: $white;
         &:hover {
-            filter: saturate(140%);
+            filter: saturate(160%);
         }
         &:active {
-            background-color: $primary-deep;
+            background: linear-gradient(180deg, #0DDEFF 0%, $primary-deep 100%) ;
         }
     }
     &-inverse {
@@ -221,6 +222,9 @@ input {
 //Logo
 .logo {
     transition: all .5s cubic-bezier(0.21, 0.15, 0, 1);
+    img {
+        vertical-align: middle;
+    }
     &:hover {
         filter: saturate(150%);
     }
@@ -264,13 +268,12 @@ input {
             .btn {
                 padding: 1.2rem 1.5rem;
                 font-size: 1rem;
-                border: 1px solid $primary;
                 vertical-align: middle;
             }
         }
     }
     &-bottom {
-        background-color: $primary;
+        background-color: #0090A7;
         color: $white;
         z-index: 20;
         .phone {
@@ -395,10 +398,9 @@ input {
 header {
     padding-top: 7rem;
     @include md(padding-top, 3rem);
-    background: #5555 url('../img/home/main-bg-compressed.jpg') bottom right / cover no-repeat;
+    background: #5555 url('../img/home/main-bg-v2-compressed.jpg') bottom center / cover no-repeat;
     min-height: 86.7vh;
     @include md-block() {
-        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #192833 100%), url('../img/home/main-bg-compressed.jpg');
         min-height: 90vh;
     }
     
@@ -407,7 +409,7 @@ header {
     .container {
         display: flex;
         flex-direction: column;
-        align-items: flex-start
+        align-items: flex-start;
     }
 
     h1 {

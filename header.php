@@ -27,7 +27,7 @@
 		<div class="navbar-top">
 			<div class="container">
 				<a href="<?php echo get_home_url(); ?>" class="logo">
-					<img src="<?php bloginfo('template_url') ?>/src/img/logo.png" alt="автонова">
+					<img src="<?php bloginfo('template_url') ?>/src/img/logo-v2.png" alt="автонова">
 				</a>
 
 				<div class="right-side">

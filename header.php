@@ -31,8 +31,8 @@
 				</a>
 
 				<div class="right-side">
-					<a href="#" class="btn btn-flat">Записаться на тест драйв</a>
-					<a href="#" class="btn btn-inverse">Заказать обратный звонок</a>
+					<a href="#test-drive-modal" rel="modal:open" class="btn btn-flat">Записаться на тест драйв</a>
+					<a href="#callback-modal" rel="modal:open" class="btn btn-inverse">Заказать обратный звонок</a>
 					<a href="tel:+375291569521" class="phone">+375 (29) 156-95-21</a>
 				</div>
 
@@ -67,5 +67,23 @@
 		</div>
 		<!-- /.navbar-bottom -->
 	</navbar>
+
+	<?php if ( !is_front_page() && !is_home() && !is_page('catalog/') && !is_single()) : ?>
+		<div class="breadcrumbs-section">
+			<div class="container">
+				<div class="breadcrumbs">
+					<span class="label">Вы тут:</span>
+					<a href="<?php echo get_home_url() ?>">Главная</a>
+					<span><?php the_title() ?></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="title-section" style="background-image: url('<?php the_field('h1_bg_image'); ?>')">
+			<div class="container">
+				<h1><?php the_title() ?></h1>
+			</div>
+		</div>
+	<?php endif; ?>
 
 	<div id="content" class="site-content">

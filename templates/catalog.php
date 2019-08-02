@@ -1,6 +1,7 @@
-
-
 <?php
+/*
+*   Template Name: Каталог
+*/
 get_header();
 ?>
 
@@ -11,7 +12,7 @@ get_header();
         <div class="breadcrumbs">
             <span class="label">Вы тут:</span>
             <a href="<?php echo get_home_url() ?>">Главная</a>
-            <span><?php the_title() ?></span>
+            <span>Каталог электромобилей</span>
         </div>
     </div>
 </div>
@@ -23,8 +24,8 @@ get_header();
             <div class="btn btn-outline">Смотреть каталог аксессуаров</div>
         </div>
         <div class="sort-by">
-			<span class="label">Сортировать по: </span>
-			<span>Цена по возрастанию</span>
+            <div class="label">Сортировать по: </div>
+            <?php echo do_shortcode('[searchandfilter id="94"]') ?>
         </div>
 
         <div class="catalog-block">
@@ -39,15 +40,24 @@ get_header();
 
             <div class="products">
                 <div class="catalog-row">
-				<?php if ( have_posts() ) :
-                        while ( have_posts() ) :
-							the_post();
-								get_template_part('templates/parts/automobile-card');
-							endwhile;
-							the_posts_navigation();
-						else :
-							echo '<div class="h3" style="margin-top: 1rem;">Товаров не найдено</div>';
-						endif;
+                    <?php
+                        // задаем нужные нам критерии выборки данных из БД
+                        $args = array(
+                            'posts_per_page' => 9,
+                            'post_type' => 'automobiles'
+                        );
+
+                        $query = new WP_Query( $args );
+
+                        // Цикл
+                        if ( $query->have_posts() ) {
+                            while ( $query->have_posts() ) {
+                                $query->the_post();
+                                get_template_part('templates/parts/automobile-card');
+                            }
+                        } else {
+                           echo '<div class="h3" style="margin-top: 1rem;">Товаров не найдено</div>';
+                        }
                         // Возвращаем оригинальные данные поста. Сбрасываем $post.
                         wp_reset_postdata();
                     ?>

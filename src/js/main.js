@@ -14,6 +14,16 @@
             });
         });
 
+        // Mask for input for phone
+        $('.phone-mask').mask('+375 (00) 000-00-00');
+
+        // accordion
+        $('.accordion:not(.active) .body').toggle();
+        $('.accordion .head').click(function() {
+            $(this).parent('.accordion').toggleClass('active');
+            $(this).next('.body').slideToggle();
+        });
+
         // Tabs script
         if($(location).attr('hash')) {
             var activeTab = $(location).attr('hash');
@@ -28,6 +38,7 @@
             deactivateTabs();
             activeTab = $(this).attr("href");
             activateTab();
+            return false;
         });
 
         function activateTab() {
@@ -53,8 +64,7 @@
         };
         $(window).bind( "scroll", handler );  
 
-        // Mask for input for phone
-        $('.phone-mask').mask('+375 (00) 000-00-00');
+        
     });
 
 })(jQuery); // <----- jQuery no conflict wrapper

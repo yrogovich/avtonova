@@ -243,7 +243,7 @@ textarea {
         vertical-align: middle;
     }
     &:hover {
-        filter: saturate(0%) contrast(200%);
+        filter: saturate(150%);
     }
 }
 
@@ -2108,6 +2108,7 @@ article {
 }
 
 #map-container {
+    overflow: hidden;
     height: 40rem;
     @include xs(height, 80rem);
     background: #efefef;
@@ -2313,11 +2314,16 @@ input[name="number"] {
         }
     }
     .sort-by {
+        display: flex;
+        align-items: center;
         font-size: 1.3rem;
         color: #686868;
         .label {
             font-weight: bold;
             margin-right: 1rem;
+        }
+        .li {
+            padding: 0;
         }
         margin-bottom: 3rem;
     }

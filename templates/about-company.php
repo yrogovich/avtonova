@@ -44,7 +44,7 @@ get_header();
 
                         <div class="btns">
                             <a href="mailto:vizhunou@autonova.by" class="btn btn-inverse">vizhunou@autonova.by</a>
-                            <a href="tel:+375291569521" class="btn btn-inverse">+375 (29) 156-95-21</a>
+                            <a href="tel:+375447300300" class="btn btn-inverse">+375 (44) 7-300-300</a>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ get_header();
 
                         <div class="btns">
                             <a href="mailto:vizhunou@autonova.by" class="btn btn-inverse">vizhunou@autonova.by</a>
-                            <a href="tel:+375291569521" class="btn btn-inverse">+375 (29) 156-95-21</a>
+                            <a href="tel:+375447300300" class="btn btn-inverse">+375 (44) 7-300-300</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ get_header();
 
                         <div class="btns">
                             <a href="mailto:vizhunou@autonova.by" class="btn btn-inverse">vizhunou@autonova.by</a>
-                            <a href="tel:+375291569521" class="btn btn-inverse">+375 (29) 156-95-21</a>
+                            <a href="tel:+375447300300" class="btn btn-inverse">+375 (44) 7-300-300</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ get_header();
 
                         <div class="btns">
                             <a href="mailto:vizhunou@autonova.by" class="btn btn-inverse">vizhunou@autonova.by</a>
-                            <a href="tel:+375291569521" class="btn btn-inverse">+375 (29) 156-95-21</a>
+                            <a href="tel:+375447300300" class="btn btn-inverse">+375 (44) 7-300-300</a>
                         </div>
                     </div>
                 </div>

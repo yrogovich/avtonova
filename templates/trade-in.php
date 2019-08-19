@@ -57,10 +57,26 @@ get_header();
                     <div class="input-wrapper selector">
                         <select class="custom-select" name="favorite_car">
                             <option>Модель желаемого автомобиля</option>
-                            <option value="0">Apples</option>
-                            <option value="1">Bananas</option>
-                            <option value="2">Grapes</option>
-                            <option value="3">Oranges</option>
+                            <?php 
+                                // задаем нужные нам критерии выборки данных из БД
+                                $args = array(
+                                    'posts_per_page' => 50,
+                                    'post_type' => 'automobiles'
+                                );
+
+                                $query = new WP_Query( $args );
+
+                                // Цикл
+                                if ( $query->have_posts() ) {
+                                    while ( $query->have_posts() ) {
+                                        $query->the_post(); ?> 
+                                            <option value="<?php the_title() ?>"><?php the_title() ?></option>
+                                        <?
+                                    }
+                                } 
+                                // Возвращаем оригинальные данные поста. Сбрасываем $post.
+                                wp_reset_postdata();
+                            ?>
                         </select>
                     </div>
                     <div>

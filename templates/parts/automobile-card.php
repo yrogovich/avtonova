@@ -1,6 +1,6 @@
 <a href="<?php the_permalink() ?>" class="car-card <?php if(has_term( 'in-stock', 'additional-options', $post->ID )) { echo ' in-stock '; } ?> ">
     <div class="img-container">
-        <img src="<?php bloginfo('template_url') ?>/src/img/home/product-thumb.jpg" alt="<?php the_title(); ?>">
+        <img src="<?php the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>">
     </div>
     <div class="content">
         <div class="title"><?php the_title() ?></div>

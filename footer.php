@@ -86,7 +86,7 @@
 				<div class="column-3">
 					<div class="title">Контакты</div>
 
-					<a href="tel:+375291569521" class="icon-phone">+375 (29) 156-95-21</a>
+					<a href="tel:+375447300300" class="icon-phone">+375 (44) 7-300-300</a>
 					<a href="mailto:info@power.avtonova.by" class="icon-mail">info@power.avtonova.by</a>
 					<a href="<?php echo get_home_url( null, 'contacts/'); ?>" class="icon-map">Гомель, ул. Хатаевича, 2</a>
 					<span class="icon-time">Время работы:</span>
@@ -99,7 +99,7 @@
 
 				<div class="column-4">
 					<a href="<?php echo get_home_url(); ?>" class="logo">
-						<img src="<?php bloginfo('template_url') ?>/src/img/logo-v2.png" alt="автонова">
+						<img src="<?php bloginfo('template_url') ?>/src/img/logo.png" alt="автонова">
 					</a>
 
 					<p class="bold">ООО "Автонова"</p>

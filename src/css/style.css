@@ -368,8 +368,8 @@ textarea:focus {
 }
 
 .logo:hover {
-  -webkit-filter: saturate(0%) contrast(200%);
-          filter: saturate(0%) contrast(200%);
+  -webkit-filter: saturate(150%);
+          filter: saturate(150%);
 }
 
 .navbar {
@@ -3046,6 +3046,7 @@ article iframe {
 }
 
 #map-container {
+  overflow: hidden;
   height: 40rem;
   background: #efefef;
   position: relative;
@@ -3330,6 +3331,12 @@ article iframe {
 }
 
 .catalog-section .sort-by {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.3rem;
   color: #686868;
   margin-bottom: 3rem;
@@ -3338,6 +3345,10 @@ article iframe {
 .catalog-section .sort-by .label {
   font-weight: bold;
   margin-right: 1rem;
+}
+
+.catalog-section .sort-by .li {
+  padding: 0;
 }
 
 .catalog-block {

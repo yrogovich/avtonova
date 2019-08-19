@@ -14,7 +14,7 @@ get_header();
 
                 <div class="contacts">
                     <p class="bold">Или связаться с нашими менеджерами:</p>
-                    <a href="tel:+375291569521" class="icon-phone">375 (29) 156-95-21</a>
+                    <a href="tel:+375447300300" class="icon-phone">375 (44) 7-300-300</a>
                     <a href="mailto:info@power.avtonova.by" class="icon-mail">korp-power@autonova.by</a>
                 </div>
             </div>

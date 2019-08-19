@@ -27,13 +27,13 @@
 		<div class="navbar-top">
 			<div class="container">
 				<a href="<?php echo get_home_url(); ?>" class="logo">
-					<img src="<?php bloginfo('template_url') ?>/src/img/logo-v2.png" alt="автонова">
+					<img src="<?php bloginfo('template_url') ?>/src/img/logo.png" alt="автонова">
 				</a>
 
 				<div class="right-side">
 					<a href="#test-drive-modal" rel="modal:open" class="btn btn-flat">Записаться на тест драйв</a>
 					<a href="#callback-modal" rel="modal:open" class="btn btn-inverse">Заказать обратный звонок</a>
-					<a href="tel:+375291569521" class="phone">+375 (29) 156-95-21</a>
+					<a href="tel:+375447300300" class="phone">+375 (44) 7-300-300</a>
 				</div>
 
 				<svg class="ham hamRotate" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
@@ -61,7 +61,7 @@
 					'menu_class'      => 'menu', 
 				] );
 				?>
-				<a href="tel:+375291569521" class="phone">+375 (29) 156-95-21</a>
+				<a href="tel:+375447300300" class="phone">+375 (44) 7-300-300</a>
 			</div>
 			<!-- /.container -->
 		</div>

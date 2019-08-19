@@ -43,7 +43,7 @@ get_header();
                     <?php
                         // задаем нужные нам критерии выборки данных из БД
                         $args = array(
-                            'posts_per_page' => 9,
+                            'posts_per_page' => 18,
                             'post_type' => 'automobiles'
                         );
 

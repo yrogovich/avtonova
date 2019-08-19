@@ -13,7 +13,7 @@
     <div class="container">
         <div class="head">
             <div class="title-medium<?php if(has_term( 'in-stock', 'additional-options', $post->ID )) 
-                                            echo ' in-stock ';  ?>">2018 NISSAN LEAF SL PREMIUM</div>
+                                            echo ' in-stock ';  ?>"><?php the_title(); ?></div>
             
         </div>
         <!-- /.head -->

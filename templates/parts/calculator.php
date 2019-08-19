@@ -70,7 +70,7 @@
             </div>
             <!-- /.body -->
             <div class="foot">
-                <a href="#" class="link-primary icon-gas-station">Карта заправок в Беларуси</a>
+                <a href="<?php echo get_home_url( null, 'map/'); ?>" class="link-primary icon-gas-station">Карта заправок в Беларуси</a>
             </div>
             <!-- /.foot -->
         </div>

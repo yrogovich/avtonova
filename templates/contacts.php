@@ -16,7 +16,7 @@ get_header();
 
                 <div class="links">
                     <a href="#map-container" class="icon-map">Гомель, ул. Хатаевича, 2</a>
-                    <a href="tel:+375291569521" class="icon-phone">+375 (29) 156-95-21</a>
+                    <a href="tel:+375447300300" class="icon-phone">+375 (44) 7-300-300</a>
                     <a href="mailto:info@power.avtonova.by" class="icon-mail">info@power.avtonova.by</a>
                 </div>
                 
@@ -28,7 +28,7 @@ get_header();
             <div class="column-2">
                 <div class="h3">Отдел продаж</div>
                 <div class="links">
-                    <a href="tel:+375291569521" class="icon-phone">+375 (29) 156-95-21</a>
+                    <a href="tel:+375447300300" class="icon-phone">+375 (44) 7-300-300</a>
                     <a href="mailto:sale-power@autonova.by" class="icon-mail">sale-power@autonova.by</a>
                     <div class="footnote">Понедельник-пятница: с 09:00 до 19:00 <br> Суббота-воскресенье: с 10:00 до 16:00</div>
 
@@ -43,7 +43,7 @@ get_header();
             <div class="column-3">
                 <div class="h3">Отдел сервиса</div>
                 <div class="links">
-                    <a href="tel:+375291569521" class="icon-phone">+375 (29) 156-95-21</a>
+                    <a href="tel:+375447300300" class="icon-phone">+375 (44) 7-300-300</a>
                     <a href="mailto:servis-power@autonova.by" class="icon-mail">servis-power@autonova.by</a>
                     <div class="footnote">Понедельник-пятница: с 09:00 до 19:00 <br> Суббота-воскресенье: с 10:00 до 16:00</div>
 

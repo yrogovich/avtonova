@@ -11,8 +11,8 @@
                 <div class="h3">Консультация специалиста</div>
                 <p class="subtitle">Если у Вас есть какие-либо вопросы или предложения, пожалуйста задайте их нашему специалисту:</p>
 
-                <a href="tel:+375291569521" class="phone-link velcom">+375 (29) 156-95-21</a>
-                <a href="tel:+375291569521" class="phone-link mts">+375 (29) 156-95-21</a>
+                <a href="tel:+375447300300" class="phone-link velcom">+375 (44) 7-300-300</a>
+                <a href="tel:+375447300300" class="phone-link mts">+375 (44) 7-300-300</a>
 
                 <form id="main-manager-form" action="javascript:" onsubmit="callHandler('#main-manager-form')" >
                     <input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">

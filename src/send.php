@@ -1,5 +1,5 @@
 <?php
-$to = 'work-biznesrost24@yandex.by'; //Почта получателя, через запятую можно указать сколько угодно адресов
+$to = 'work-biznesrost24@yandex.by, atz-nissan@autonova.by, market@autonova.by, mskoblik@autonova.by, fil@autonova.by'; //Почта получателя, через запятую можно указать сколько угодно адресов
 $subject = 'Заявка с сайта '.$_SERVER['SERVER_NAME'] . ' ' . $_POST['form']; //Заголовок сообщения
 // $senddate = date("d.m.Y H:i:s");
 // $ref = $_SERVER['HTTP_REFERER'];
